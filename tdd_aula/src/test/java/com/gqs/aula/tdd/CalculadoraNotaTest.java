@@ -17,4 +17,10 @@ public class CalculadoraNotaTest {
         CalculadoraNota calc = new CalculadoraNota();
         calc.calcularNotaFinal(-10.0, 40.0);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testNotaAcimaDoLimiteLancaExcecao() {
+        CalculadoraNota calc = new CalculadoraNota();
+        calc.calcularNotaFinal(60.0, 50.0);
+    }
 }

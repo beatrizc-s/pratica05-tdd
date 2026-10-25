@@ -6,6 +6,13 @@ public class CalculadoraNota {
         if (n1 < 0 || n2 < 0) {
             throw new IllegalArgumentException("As notas não podem ser negativas.");
         }
-        return n1 + n2;
+        
+        double total = n1 + n2;
+        
+        if (total > 100.0) {
+            throw new IllegalArgumentException("A nota final não pode ser superior a 100.");
+        }
+        
+        return total;
     }
 }
